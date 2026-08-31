@@ -1,14 +1,22 @@
+# Automated Computational Profiling of CFTR Gene Variants for Pathogenicity Assessment in Cystic Fibrosis
+
+A bioinformatics pipeline designed to parse, annotate, filter, and prioritize *CFTR* (Cystic Fibrosis Transmembrane Conductance Regulator) genomic variants from VCF datasets for clinical pathogenicity assessment.
+
+## Objective
+
+The primary objective of this project is to build an automated, reproducible computational pipeline that extracts *CFTR* gene variants from high-throughput genomic data, enriches them with multi-database annotations (ClinVar, gnomAD, CFTR2), predicts functional impact using *in silico* scores (CADD, SIFT, PolyPhen-2), and prioritizes high-confidence pathogenic mutations for clinical interpretation and targeted therapeutic mapping.
+
 ## Workflow & Methodology
 
 The pipeline follows a structured 5-step computational workflow:
 
 ### Step 1: Data Acquisition
 * Coordinates: Human *CFTR* gene on Chromosome 7 (GRCh38: `NC_000007.14:g.117480025-117668665`).
-* Input: ClinVar VCF datasets and sample target files containing known *CFTR* variants (e.g., F508del, G551D, VUS).
+* Input: ClinVar VCF datasets and sample target files containing known *CFTR* variants.
 
 ### Step 2: Variant Annotation
-* Tools: SnpEff / ANNOVAR integration.
-* Added Context: Gene locations (exon, intron, UTRs), mutation types (missense, nonsense, frameshift), and protein-level changes (e.g., p.Phe508del).
+* Tools: SnpEff integration.
+* Added Context: Gene locations (exon, intron, UTRs), mutation types (missense, nonsense, frameshift), and protein-level changes.
 
 ### Step 3: Database Integration & In Silico Scoring
 * **ClinVar**: Extract reported clinical significance (Pathogenic, Benign, VUS).
