@@ -18,13 +18,13 @@ The pipeline follows a structured 5-step computational workflow:
 * Tools: SnpEff integration.
 * Added Context: Gene locations (exon, intron, UTRs), mutation types (missense, nonsense, frameshift), and protein-level changes.
 
-### Step 3: Database Integration & In Silico Scoring
+### Step 3: Database Integration (Cross referencing)
 * **ClinVar**: Extract reported clinical significance (Pathogenic, Benign, VUS).
 * **CFTR2**: Cross-reference variants with disease-specific clinical data.
 * **gnomAD**: Retrieve global Allele Frequencies ($AF$) to filter common polymorphisms ($AF < 0.01$).
 * **In Silico Predictors**: Fetch SIFT, PolyPhen-2, and CADD impact scores.
 
-### Step 4: Python Data Processing & Prioritization
+### Step 4: Scoring Python Data Processing & Prioritization
 Executed via custom Python modules (`scripts/parsing.py`, `scripts/pipeline.py`):
 1. **Quality Filtering**: Retain high-confidence variant calls.
 2. **Frequency Filtering**: Exclude common benign variants ($AF > 0.01$).
