@@ -1,0 +1,19 @@
+# Exclude heavy genomic files & indices
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.tbi
+
+# Exclude large tools & downloaded archives
+snpEff/
+snpEff_latest_core.zip
+summary.genes.txt
+summary/
+testresults/
+testresults.genes.txt
+
+# Force Git to track CSVs, PNGs, and scripts
+!*.csv
+!*.png
+!*.py
+!*.md
