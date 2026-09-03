@@ -6,6 +6,12 @@ A bioinformatics pipeline designed to parse, annotate, filter, and prioritize *C
 
 The primary objective of this project is to build an automated, reproducible computational pipeline that extracts *CFTR* gene variants from high-throughput genomic data, enriches them with multi-database annotations (ClinVar, gnomAD, CFTR2), predicts functional impact using *in silico* scores (CADD, SIFT, PolyPhen-2), and prioritizes high-confidence pathogenic mutations for clinical interpretation and targeted therapeutic mapping.
 
+## Genomic Domain & Coordinates
+* **Target Gene:** *CFTR* (Cystic Fibrosis Transmembrane Conductance Regulator)
+* **Organism:** *Homo sapiens*
+* **Chromosome Region:** `chr7:117,480,025 - 117,668,665`
+* **Genome Assembly:** GRCh38 / hg38 (`NC_000007.14`)
+
 ## Workflow & Methodology
 
 The pipeline follows a structured 5-step computational workflow:
